@@ -1,0 +1,98 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    overflow: auto; /* Enable scrolling if needed */
+    animation: fadeIn 0.3s ease-out; /* Optional: fade in effect for the background */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px 50px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 25px;
+    transform: scale(0); /* Initial scale (small) */
+    animation: zoomIn 0.3s forwards;
+}
+
+/* Keyframe for fading in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Keyframe for zooming in */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Close Button */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    transition: 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input-modal {
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 22px;
+    border-radius: 100px;
+    border: 0px;
+    color:  var(--tertiary-color);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input-modal::placeholder {
+    color: var(--tertiary-color);
+    opacity: .8;
+}
+
+
+.modal-submit {
+    background: var(--tertiary-color);
+    padding: 10px 50px;
+    margin-top: 20px;
+    border-radius: 100px;
+    border: solid 3px var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.modal-title{
+    color: var(--secondary-color);
+}
